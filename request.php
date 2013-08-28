@@ -12,6 +12,7 @@
 	
 	// URL also Can be https://ir.zarinpal.com/pg/services/WebGate/wsdl
 	$client = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl', 'wsdl'); 
+	$client->soap_defencoding = 'UTF-8';
 	$result = $client->call('PaymentRequest', array(
 													array(
 															'MerchantID' 	=> $MerchantID,
