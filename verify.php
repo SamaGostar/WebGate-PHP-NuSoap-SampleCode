@@ -8,9 +8,9 @@
 	
 	if($_GET['Status'] == 'OK'){
 		// URL also Can be https://ir.zarinpal.com/pg/services/WebGate/wsdl
-		$client = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl', array('encoding' => 'UTF-8')); 
+		$client = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl', 'wsdl'); 
 		
-		$result = $client->call("PaymentVerification", array(
+		$result = $client->call('PaymentVerification', array(
 															array(
 																	'MerchantID'	 => $MerchantID,
 																	'Authority' 	 => $Authority,
